@@ -70,6 +70,8 @@ async def get_food_breakfast():
         if row[0] is None:
             continue
         a, b, c = row
+        b = 'Н' if b is None else b
+        c = 'Н' if c is None else c
         rows += f'{a} | <i>{b}</i> | <b>{c}</b>\n'
         rows += f'{barrier}\n'
 
@@ -97,6 +99,8 @@ async def get_food_obed():
         if row[0] is None:
             continue
         a, b, c = row
+        b = 'Н' if b is None else b
+        c = 'Н' if c is None else c
         rows += f'{a} | <i>{b}</i> | <b>{c}</b>\n'
         rows += f'{barrier}\n'
 

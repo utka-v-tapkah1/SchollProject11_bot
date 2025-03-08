@@ -18,13 +18,13 @@ async def _wait_for_download():
         tmp_files = [f for f in files if f.endswith('.tmp')]
         if not tmp_files:
             break
-        await asyncio.sleep(1)
+        await asyncio.sleep(0.1)
 
 
 async def parse_xlsx(today):
     """Скачивает xlsx-файл за указанную дату."""
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
 
