@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 async def start():
 
     config = load_config()
-    token = config.tg_bot.token
+    token = config.tgbot.token
 
     bot = Bot(token=token,
               default=DefaultBotProperties(parse_mode=ParseMode.HTML))
